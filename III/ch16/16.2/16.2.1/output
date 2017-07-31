@@ -1,0 +1,4 @@
+$ readelf -p .comment 16.2.1
+
+String dump of section '.comment':
+  [     0]  GCC: (GNU) 4.8.5 20150623 (Red Hat 4.8.5-11)
