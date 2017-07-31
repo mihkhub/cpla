@@ -1,0 +1,13 @@
+$ make
+g++ -O0 -Wall -g -std=gnu++11 -msse4.2  16.2.6.cpp -o 16.2.6 
+16.2.6.cpp:9:14: error: converting to ‘Date’ from initializer list would use explicit constructor ‘Date::Date(int, int, int)’
+ Date d3 = {15}; // error : = initialization does not do implicit conversions
+              ^
+16.2.6.cpp:10:11: error: conversion from ‘int’ to non-scalar type ‘Date’ requested
+ Date d4 = 15; // error : = initialization does not do implicit conversions
+           ^
+16.2.6.cpp: In function ‘void f()’:
+16.2.6.cpp:13:11: error: ‘my_fct’ was not declared in this scope
+  my_fct(15); // error : argument passing does not do implicit conversions
+           ^
+make: *** [16.2.6] Error 1
